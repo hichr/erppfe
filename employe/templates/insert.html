@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter employe</title>
+</head>
+<style>
+    table {
+        border: 8px outset;
+        border-radius: 10px;
+        border-spacing: 10px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <h2 style="text-align:center"> Enter Details of employe </h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table style="width:50%" align="center">
+
+
+                        <tr>
+                <td>employe nom</td>
+                <td><input type="text"  name="nom"></td>
+            </tr>
+            <tr>
+                <td>employe prenom</td>
+                <td><input type="text"  name="prenom"></td>
+            </tr>
+            <tr>
+                <td>employe adresse</td>
+                <td><input type="text"  name="adresse"></td>
+            </tr>
+            <tr>
+                <td>employe tel</td>
+                <td><input type="text"  name="tel"></td>
+            </tr>
+
+            <tr>
+                <td>employe fax</td>
+                <td><input type="text"  name="fax"></td>
+            </tr>
+            <tr>
+                <td>employe ville</td>
+                <td><input type="text"  name="ville"></td>
+            </tr>
+
+             <tr>
+                <td>employe email</td>
+                <td><input type="text"  name="email"></td>
+            </tr>
+            <tr>
+                <td>employe motdepasse</td>
+                <td><input type="text"  name="motdepasse"></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td colspan="2" align="center"><input type="submit" class="btn btn-success"> </td>
+            </tr>
+        </table>
+
+        <br><br>
+        <div class="alert alert-danger" role="alert">
+            Do you want see Information of employes?
+        </div>
+
+        <p>
+            <a href="{% url 'show-employe' %}">Go To employe Information--></a>
+        </p>
+    </form>
+</body>
+
+</html>

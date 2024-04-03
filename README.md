@@ -1,2 +1,0 @@
-# erppfe
-mon pfe django
